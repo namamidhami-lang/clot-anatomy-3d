@@ -1,0 +1,1 @@
+This project uses external placeholder GLB files (Khronos sample Avocado) for the demo. Replace with vascular GLB files at /public/models/male_vascular.glb and /public/models/female_vascular.glb for realistic anatomy.
