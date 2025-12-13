@@ -1,0 +1,114 @@
+{
+  "clotLocations": [
+    {
+      "id": "left-arm-proximal",
+      "name": "Left Upper Limb — Axillary/Brachial Vein Thrombosis",
+      "shortLabel": "L Upper Limb",
+      "sex": ["male","female"],
+      "position3D": [-30, 10, 20],
+      "baseRisk": 0.05,
+      "commonSymptoms": [
+        "sudden unilateral arm swelling",
+        "arm pain or tenderness (may worsen with movement)",
+        "prominent/engorged superficial veins",
+        "warmth and skin discoloration"
+      ],
+      "notes": "Upper-extremity DVT (axillary/brachial) is associated with central venous catheters, effort-related thrombosis (Paget–Schroetter), cancer, and thoracic outlet syndrome. Prompt imaging (duplex ultrasound) and anticoagulation are indicated according to clinical guidelines. Clinical review required.",
+      "sources": [
+        "https://www.radiologyinfo.org/en/info/acs-upper-extremity-dvt",
+        "https://thrombosisuk.org/wp-content/uploads/2024/12/Upper-extremity-DVT.pdf",
+        "https://www.healthline.com/health/upper-extremity-dvt"
+      ]
+    },
+    {
+      "id": "right-arm-proximal",
+      "name": "Right Upper Limb — Axillary/Brachial Vein Thrombosis",
+      "shortLabel": "R Upper Limb",
+      "sex": ["male","female"],
+      "position3D": [30, 10, 20],
+      "baseRisk": 0.05,
+      "commonSymptoms": [
+        "sudden unilateral arm swelling",
+        "arm pain or tenderness (may worsen with movement)",
+        "prominent/engorged superficial veins",
+        "warmth and skin discoloration"
+      ],
+      "notes": "See left-arm entry. Management and diagnosis follow the same principles.",
+      "sources": [
+        "https://www.radiologyinfo.org/en/info/acs-upper-extremity-dvt",
+        "https://thrombosisuk.org/wp-content/uploads/2024/12/Upper-extremity-DVT.pdf"
+      ]
+    },
+    {
+      "id": "left-leg-proximal",
+      "name": "Left Lower Limb — Femoral/Proximal DVT",
+      "shortLabel": "L Lower Limb",
+      "sex": ["male","female"],
+      "position3D": [-20, -40, 10],
+      "baseRisk": 0.12,
+      "commonSymptoms": [
+        "unilateral leg swelling (calf or thigh)",
+        "calf pain or tenderness (often worse on standing/walking)",
+        "redness, warmth, or skin discoloration"
+      ],
+      "notes": "Proximal deep vein thrombosis (femoral/iliac) carries higher risk of pulmonary embolism. Use clinical scoring (Wells score) and diagnostic testing (D-dimer, compression ultrasound) per guidelines. Clinical review required.",
+      "sources": [
+        "https://www.nhs.uk/conditions/deep-vein-thrombosis-dvt/",
+        "https://www.nhlbi.nih.gov/health/deep-vein-thrombosis",
+        "https://www.mayoclinic.org/diseases-conditions/deep-vein-thrombosis/symptoms-causes/syc-20352557"
+      ]
+    },
+    {
+      "id": "right-leg-proximal",
+      "name": "Right Lower Limb — Femoral/Proximal DVT",
+      "shortLabel": "R Lower Limb",
+      "sex": ["male","female"],
+      "position3D": [20, -40, 10],
+      "baseRisk": 0.12,
+      "commonSymptoms": [
+        "unilateral leg swelling (calf or thigh)",
+        "calf pain or tenderness (often worse on standing/walking)",
+        "redness, warmth, or skin discoloration"
+      ],
+      "notes": "See left-leg entry. Proximal DVTs have elevated PE risk and should be evaluated promptly.",
+      "sources": [
+        "https://www.nhs.uk/conditions/deep-vein-thrombosis-dvt/",
+        "https://www.nhlbi.nih.gov/health/deep-vein-thrombosis",
+        "https://www.mayoclinic.org/diseases-conditions/deep-vein-thrombosis/symptoms-causes/syc-20352557"
+      ]
+    },
+    {
+      "id": "pulmonary-artery",
+      "name": "Pulmonary Embolism (PE)",
+      "shortLabel": "Pulmonary",
+      "sex": ["male","female"],
+      "position3D": [0, 10, 0],
+      "baseRisk": 0.08,
+      "commonSymptoms": [
+        "sudden unexplained shortness of breath",
+        "pleuritic chest pain (worse on deep breath)",
+        "cough, sometimes with blood-streaked sputum",
+        "rapid heart rate, lightheadedness, or syncope"
+      ],
+      "notes": "Pulmonary embolism is a potential complication of DVT. It can be life-threatening; urgent evaluation (CT pulmonary angiography, D-dimer, leg ultrasound) and management are required. This entry is educational—clinical confirmation required.",
+      "sources": [
+        "https://cks.nice.org.uk/topics/pulmonary-embolism/",
+        "https://www.mayoclinic.org/diseases-conditions/pulmonary-embolism/symptoms-causes/syc-20354647",
+        "https://www.lung.org/lung-health-diseases/lung-disease-lookup/pulmonary-embolism/symptoms-diagnosis"
+      ]
+    }
+  ],
+  "riskModifiers": {
+    "bmi": [
+      { "min": 0, "max": 24.9, "multiplier": 1.0, "note": "Normal BMI reference" },
+      { "min": 25, "max": 29.9, "multiplier": 1.2, "note": "Overweight increases VTE risk per CDC/NICE" },
+      { "min": 30, "max": 100, "multiplier": 1.5, "note": "Obesity significantly increases VTE risk (see JAMA/NHLBI)" }
+    ],
+    "age": [
+      { "min": 0, "max": 39, "multiplier": 1.0 },
+      { "min": 40, "max": 64, "multiplier": 1.2 },
+      { "min": 65, "max": 120, "multiplier": 1.5 }
+    ],
+    "notes": "Risk modifiers are illustrative and derived from CDC, NICE and peer-reviewed literature. Clinical scoring systems (Wells, Caprini) should be used for formal risk stratification."
+  }
+}
