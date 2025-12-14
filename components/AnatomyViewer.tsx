@@ -50,7 +50,7 @@ function Model({ path }: { path: string }) {
   return (
     <primitive
       object={gltf.scene}
-      scale={0.01}
+      scale={0.05}
       position={[0, -1.5, 0]}
     />
   )
