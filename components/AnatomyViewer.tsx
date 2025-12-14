@@ -25,7 +25,7 @@ function Hotspot({ pos, label, id, onClick }: { pos: [number,number,number]; lab
 
 function Model({ path }: { path: string }) {
   const gltf = useGLTF(path)
-  return <primitive object={gltf.scene} scale={1.1} />
+  return <primitive object={gltf.scene} scale={10} />
 }
 
 export default function AnatomyViewer({ modelPath, clotLocations, onSelect }: Props) {
