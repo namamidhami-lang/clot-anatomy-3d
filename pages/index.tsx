@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic
 import Controls from '../components/Controls'
 import { ClotDataEntry } from '../types'
 import clotData from '../data/clots.json'
