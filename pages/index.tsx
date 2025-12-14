@@ -24,8 +24,13 @@ export default function Home() {
   const riskValue = selected ? calculateRisk(selected.baseRisk, { bmi, age, sex }) : null
 
   // placeholder external GLB files (Khronos sample Avocado) - replace with vascular GLBs in /public/models
-  const placeholderMale = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Avocado/glTF-Binary/Avocado.glb'
-  const placeholderFemale = placeholderMale
+  const maleModel = '/models/male.glb'
+const femaleModel = '/models/female.glb' // (will add later)
+<AnatomyViewer
+  modelPath={sex === 'male' ? maleModel : femaleModel}
+  clotLocations={clotData.clotLocations.filter(c => c.sex.includes(sex))}
+  onSelect={onSelect}
+/>
 
   return (
     <div className="min-h-screen flex flex-col">
